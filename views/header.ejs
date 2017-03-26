@@ -22,14 +22,20 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Find Words</h1>
+    <div class="container">
+      <div class="col-md-4">
+        <h1>Find Words</h1>
+        <p>
+          A simple wildcard search for English words that match a given wildcard pattern.
+        </p>
+        <p>Use _ for wildcard characters.</p>
 
-    <form action="/search" method="post">
-      <% if (pattern){ %>
-      <input type="text" name="pattern" value="<%= pattern %>"><br>
-      <% }else{ %>
-      <input type="text" name="pattern"><br>
-      <% } %>
-      <input type="submit" value="Submit">
-    </form>
+        <form action="/search" method="post">
+          <% if (pattern){ %>
+          <input type="text" name="pattern" value="<%= pattern %>"><br>
+          <% }else{ %>
+          <input type="text" name="pattern">
+          <% } %>
+          <input type="submit" value="Submit">
+        </form>
 

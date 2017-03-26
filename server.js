@@ -19,7 +19,6 @@ app.get('/', function (req, res) {
 });
 
 app.post('/search', (req, res) => {
-  //res.send(words.search(req.body.pattern, dictionary));
   res.render('result', words.search(req.body.pattern, dictionary))
 });
 
