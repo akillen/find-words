@@ -1,0 +1,12 @@
+<% include header %>
+
+<p>
+  Words found: <%= words.length %>
+</p>
+
+<ul>
+<% words.forEach((word)=>{ %>
+  <li><%= word %></li>
+<% }); %>
+</ul>
+<% include footer %>

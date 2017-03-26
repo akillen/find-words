@@ -25,7 +25,11 @@
     <h1>Find Words</h1>
 
     <form action="/search" method="post">
+      <% if (pattern){ %>
+      <input type="text" name="pattern" value="<%= pattern %>"><br>
+      <% }else{ %>
       <input type="text" name="pattern"><br>
+      <% } %>
       <input type="submit" value="Submit">
     </form>
 
